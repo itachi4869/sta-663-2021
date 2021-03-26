@@ -17,7 +17,7 @@ double get(Eigen::MatrixXd xs, int i, int j) {
 }
 
 // takes numpy array as input and returns double
-double det(Eigen::MatrixXd xs) {
+double deter(Eigen::MatrixXd xs) {
     return xs.determinant();
 }
 
@@ -29,5 +29,5 @@ Eigen::MatrixXd inv(Eigen::MatrixXd xs) {
 PYBIND11_MODULE(ex8, m) {
     m.doc() = "auto-compiled c++ extension";
     m.def("inv", &inv);
-    m.def("det", &det);
+    m.def("deter", &deter);
 }
